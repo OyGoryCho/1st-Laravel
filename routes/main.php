@@ -19,7 +19,7 @@ Route::view('/', 'welcome');
 
 Route::redirect('/home', '/');
 
-Route::get('/test', TestController::class);     //$ php artisan make:controller TestController
+Route::get('/test', TestController::class)->name('test');     //$ php artisan make:controller TestController
 
 Route::get('blog', [BlogController::class, 'index'])->name('blog');
 Route::get('blog/{post}', [BlogController::class, 'show'])->name('blog.show');
