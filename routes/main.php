@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TestController;
 use App\Http\Middleware\LogMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -17,15 +18,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome')->name('home');
+Route::view('/', 'home.index')->name('home');
 
 Route::redirect('/home', '/');
 Route::middleware('guest')->group(function(){      //накладывает на всех в группе app/http/kernel.php -> 'guest'
-    Route::get('register', [AuthController::class, 'index'])->name('register');
-    Route::post('register', [AuthController::class, 'store'])->name('register.store');
+    Route::get('register', [RegisterController::class, 'index'])->name('register');
+    Route::post('register', [RegisterController::class, 'store'])->name('register.store');
     
-    Route::get('login', [AuthController::class, 'index'])->name('login')->withoutMiddleware('guest');
-    Route::post('login', [AuthController::class, 'store'])->name('login.store');
+    Route::get('login', [LoginController::class, 'index'])->name('login')->withoutMiddleware('guest');
+    Route::post('login', [LoginController::class, 'store'])->name('login.store');
 });
 
 

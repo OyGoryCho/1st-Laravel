@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AuthController extends Controller
+class RegisterController extends Controller
 {
-    public function index()
+        public function index()
     {
-        return 'Страница регистрации и аутентификации';
+        return view('register.index');
     }
 
     public function store()
