@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'home.index')->name('home');
+Route::get('/test', TestController::class)->name('test')->middleware(LogMiddleware::class);     //$ php artisan make:controller TestController
 
 Route::redirect('/home', '/');
 Route::middleware('guest')->group(function(){      //накладывает на всех в группе app/http/kernel.php -> 'guest'
@@ -31,7 +32,6 @@ Route::middleware('guest')->group(function(){      //накладывает на
 
 
 
-Route::get('/test', TestController::class)->name('test')->middleware(LogMiddleware::class);     //$ php artisan make:controller TestController
 
 Route::get('blog', [BlogController::class, 'index'])->name('blog');
 Route::get('blog/{post}', [BlogController::class, 'show'])->name('blog.show');
