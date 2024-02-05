@@ -18,25 +18,20 @@
                         
                         <x-card-body>
                             <x-form action="{{route('login.store')}}" method="POST">
-                                <x-form-item class="mb-3">
-                                    <label class="required">{{__('Email')}}</label>
-                                    <input type="email" name="email" class="form-control" autofocus>
+                                <x-form-item>
+                                    <x-label required>{{__('Email')}}</x-label>
+                                    <input type="email" name="email" class="form-control" autofocus/>
                                 </x-form-item>
                                 
                                 <x-form-item class="mb-2">
-                                    <label class="required">{{__('Password')}}</label>
-                                    <input type="password" name="password" class="form-control">
+                                    <x-label required>{{__('Password')}}</x-label>
+                                    <input type="password" name="password" class="form-control"/>
                                 </x-form-item>
 
-
-                                <x-form-item class="mb3 mb-4">
-                                    <x-form-item class="form-check">
-                                        <input type="checkbox" name="remember" value="1"  class="form-check-input" id="remember">
-
-                                        <label class="form-check-label" for="remember">
-                                            {{__('Запомнить меня')}}
-                                        </label>
-                                    </x-form-item>                                      
+                                <x-form-item class="mb-4">
+                                    <x-checkbox name="remember">
+                                        {{ __('Запомнить меня')}}
+                                    </x-checkbox>                             
                                 </x-form-item>
 
                                 <button type="submit" class="btn btn-primary">
@@ -50,4 +45,3 @@
         </x-container>
     </section>
 @endsection
-
