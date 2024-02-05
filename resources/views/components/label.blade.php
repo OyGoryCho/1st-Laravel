@@ -4,4 +4,4 @@
     'mb-2',($required ? 'required' : '')
 ])}}>
     {{$slot}}
-</label>
+</label>    
