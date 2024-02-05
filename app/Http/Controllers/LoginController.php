@@ -13,6 +13,6 @@ class LoginController extends Controller
 
     public function store()
     {
-        return 'Запрос';
+        return 'Запрос на вход';
     }
 }
