@@ -34,9 +34,9 @@
                                     </x-checkbox>                             
                                 </x-form-item>
 
-                                <button type="submit" class="btn btn-primary">
+                                <x-button type="submit"  color="success">
                                     {{__('Войти')}}
-                                </button>
+                                </x-button>
                             </x-form>
                         </x-card-body>
                     </x-card>
