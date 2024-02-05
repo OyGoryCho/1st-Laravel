@@ -1,7 +1,7 @@
-@extends('layouts.base')
+@extends('layouts.main')
 
 
-@section('content')
+@section('main.content')
 <h1>
     Главная страница
 </h1>
