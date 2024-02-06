@@ -6,19 +6,14 @@
         {{__('Создать пост')}}
 
         <x-slot name="link" >
-            <x-button-link href="{{route('user')}}" color="danger">
-                {{__('Отмена')}}   
+            <x-button-link href="{{route('user')}}" color="dark">
+                {{__('Назад')}}   
             </x-button-link>
         </x-slot>
-    </x-title>  
+    </x-title >  
 
-    <x-form action="{{ route('user.posts.store')}}" method="POST">
-        <x-form-item>
-            <x-label required>{{__('Название поста')}}</x-label>
-            <x-input name="title" autofocus/>
-        </x-form-item>
+    <x-post.form action="{{ route('user.posts.store')}}" />
 
-    </x-form>
-    
     
 @endsection
+

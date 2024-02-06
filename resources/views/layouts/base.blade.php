@@ -10,6 +10,7 @@
         .container{max-width: 720px;}
         .required:after {content: '*'; color: red; margin-left: 3px;}
     </style>
+    
 </head>
 <body>
     <div class='d-flex flex-column justify-content-between min vh-100' >
@@ -25,6 +26,6 @@
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.min.js"></script>
-
+    @stack('js')
 </body>
 </html>

@@ -8,6 +8,9 @@
             <x-button-link href="{{route('user')}}">
                 {{__('Назад')}}   
             </x-button-link>
+            <x-button-link href="{{route('user.posts.edit', $post->id)}}" color="dark" class="ms-2">
+                {{__('Изменить')}}
+            </x-button-link>
         </x-slot>
             {{__('Просмотр поста')}}
     </x-title>  
@@ -22,8 +25,7 @@
         @if (empty($post))
                 {{__('Нет описания')}}
             @else
-                {{$post->content}}
-                
+                {!!$post->content!!}
         @endif 
     </div>
 @endsection
