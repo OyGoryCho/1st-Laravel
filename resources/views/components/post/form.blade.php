@@ -2,7 +2,7 @@
 
 
 <div>
-    <x-form {{$attributes}} method="POST">
+    <x-form {{$attributes}}>
         <x-form-item>
             <x-label required>{{__('Название поста')}}</x-label>
             <x-input name="title" value="{{ $post->title ?? ''}}" autofocus/>
@@ -13,9 +13,7 @@
             <x-trix  name="{{$name}}" value="{{ $post->content ?? '' }}" />
         </x-form-item>
 
-        <x-button type="submit">
-            {{__('Создать пост')}}
-        </x-button>
-
+        
+        {{$slot}}
     </x-form>
 </div>

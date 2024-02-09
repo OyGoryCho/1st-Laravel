@@ -35,13 +35,13 @@
             </x-form-item>
 
             <x-form-item class="mb-4">
-                <x-checkbox name="remember">
+                <x-checkbox name="agreement">
                     {{ __('Я согласен на обработку пользоавтельских данных')}}
                 </x-checkbox>                             
             </x-form-item>
 
             <x-button type="submit"  >
-                {{__('Войти')}}
+                {{__('Зарегистрироваться')}}
             </x-button>
         </x-form>
     </x-card-body>
