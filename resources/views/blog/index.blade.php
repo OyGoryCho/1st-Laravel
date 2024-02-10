@@ -5,6 +5,8 @@
     <x-title reverse>
         {{__('Список постов')}}
     </x-title>  
+
+    @include('blog.filter')
     @if (empty($posts))
             {{__('Пока нет ни одного поста')}}
         @else
