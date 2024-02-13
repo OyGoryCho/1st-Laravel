@@ -22,11 +22,15 @@ class LoginController extends Controller
         // dd($request->Is('log*'));
         // dd($request->routeIs('log*'));
 
-        $email = $request->input('email');
-        $password = $request->input('password');
-    // $remember = !! $request->input('remember');
-        $remember = $request->boolean('remember');
+    //     $email = $request->input('email');
+    //     $password = $request->input('password');
+    // // $remember = !! $request->input('remember');
+    //     $remember = $request->boolean('remember');
 
-        dd($email, $password, $remember);
+    //     dd($email, $password, $remember);
+
+       // return response()->redirectToRoute('user');
+       //return redirect()->route('user');
+        return redirect()->back()->withInput();
     }
 }

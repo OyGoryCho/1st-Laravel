@@ -11,8 +11,14 @@ class TestController extends Controller
     {
         $this->middleware('throttle:10');
     }
-    public function __invoke()
+    public function __invoke(Request $request)
     {
-        return 'Test';
+        //action
+
+        //respoce
+      //  return 'Test';
+
+       // return response('test', 200, ['hea' => 'ders',]); //(Не обязательно указывать вторую и третью)
+       //return response()->json([], 200 ,[])
     }
 }

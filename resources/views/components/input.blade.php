@@ -4,5 +4,5 @@
     'form-control',
 ])->merge([
     'type' => 'text',
-    'value' => (old($attributes->get('name')) ?: $value),
+    'value' => request()->old($attributes->get('name')),
 ]) }}>

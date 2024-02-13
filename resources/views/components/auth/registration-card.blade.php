@@ -16,26 +16,26 @@
         <x-form action="{{route('register.store')}}" method="POST">    
             <x-form-item>
                 <x-label required>{{__('Имя')}}</x-label>
-                <input  name="name" class="form-control" autofocus/>
+                <x-input  name="name" class="form-control" autofocus/>
             </x-form-item>
 
             <x-form-item>
                 <x-label required>{{__('Почта')}}</x-label>
-                <input type="email" name="email" class="form-control"/>
+                <x-input type="email" name="email"  class="form-control"/>
             </x-form-item>
 
             <x-form-item class="mb-2">
                 <x-label required>{{__('Пароль')}}</x-label>
-                <input type="password" name="password" class="form-control"/>
+                <x-input type="password" name="password" class="form-control"/>
             </x-form-item>
 
             <x-form-item class="mb-2">
                 <x-label required>{{__('Повтор пароля')}}</x-label>
-                <input type="password" name="password_comfirmation" class="form-control"/>
+                <x-input type="password" name="password_comfirmation" class="form-control"/>
             </x-form-item>
 
             <x-form-item class="mb-4">
-                <x-checkbox name="agreement">
+                <x-checkbox name="agreement" >
                     {{ __('Я согласен на обработку пользоавтельских данных')}}
                 </x-checkbox>                             
             </x-form-item>

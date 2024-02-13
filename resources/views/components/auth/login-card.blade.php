@@ -16,16 +16,16 @@
         <x-form action="{{route('login.store')}}" method="POST">
             <x-form-item>
                 <x-label required>{{__('Email')}}</x-label>
-                <input type="email" name="email" class="form-control" autofocus/>
+                <x-input type="email" name="email" class="form-control" autofocus/>
             </x-form-item>
             
             <x-form-item class="mb-2">
                 <x-label required>{{__('Password')}}</x-label>
-                <input type="password" name="password" class="form-control"/>
+                <x-input type="password" name="password" class="form-control"/>
             </x-form-item>
 
             <x-form-item class="mb-4">
-                <x-checkbox name="remember">
+                <x-checkbox name="remember" >
                     {{ __('Запомнить меня')}}
                 </x-checkbox>                             
             </x-form-item>
