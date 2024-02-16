@@ -27,6 +27,7 @@ class PostController extends Controller
         $title =  $request->input('title');
         $content = $request->input('content');
       // dd($title , $content);
+        alert(__('Пост создан успешно!'));
         return redirect()->route('user.posts.show', 1488);
 
     }
@@ -56,11 +57,14 @@ class PostController extends Controller
         $title =  $request->input('title');
         $content = $request->input('content');
         //dd($title , $content);
+        alert(__('Пост изменен!'), 'danger');
         return redirect()->route('user.posts.show', 1488);
     }
 
     public function delete($post)
     {
+        alert(__('Пост удален!'));
+
         return redirect()->route('user.posts');
     }
 

@@ -8,3 +8,13 @@ if (! function_exists('active_link')) {
         return Route::is($name) ? $active : '';
     }
 }
+
+if (! function_exists('alert')) {
+    function alert(string $text, string $color = 'success')
+    {
+       session([
+            'alert' => $text,
+            'color' => $color,
+        ]);
+    }
+}
